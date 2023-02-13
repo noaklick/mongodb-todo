@@ -1,0 +1,27 @@
+{
+  "name": "mongodb-to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "mongoose": "^6.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noaklick/mongodb-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noaklick/mongodb-todo/issues"
+  },
+  "homepage": "https://github.com/noaklick/mongodb-todo#readme"
+}
