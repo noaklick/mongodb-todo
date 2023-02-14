@@ -24,19 +24,22 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
 
 app.set("view engine", "ejs");
 
-// get method
+// get method concept example
 app.get("/", (req, res) => {
-    TodoTask.find({}, (err, tasks) => {
+    TodoTask.find({}, (err, tasks) => 
+    // render template concept example
+    {
         res.render("todo.ejs", { todoTasks: tasks });
     });
 });
 
-// post method
+// post method concept example
 app.post('/',async (req, res) => {
     const todoTask = new TodoTask({
         content: req.body.content
     });
     try {
+        // await concept example
         await todoTask.save();
         res.redirect("/");
     } 
@@ -46,9 +49,10 @@ app.post('/',async (req, res) => {
 });
 
 // update method
-//UPDATE
 app
+// example of route concept
     .route("/edit/:id")
+    // get/post request concept example
     .get((req, res) => {
         const id = req.params.id;
         TodoTask.find({}, (err, tasks) => {
@@ -64,6 +68,7 @@ app
     });
 
 // delete method
+// example of route concept
 app.route("/remove/:id").get((req, res) => {
     const id = req.params.id;
     TodoTask.findByIdAndRemove(id, err => {
